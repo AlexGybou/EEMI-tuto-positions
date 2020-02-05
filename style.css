@@ -1,0 +1,96 @@
+@import url('reset.css');
+
+/* Generalités */
+
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 50px 0 30px 30px;
+}
+
+.content > div {
+    height: 150px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.content > div:nth-child(1) {
+    background-color: lightseagreen;
+}
+
+.content > div:nth-child(2) {
+    background-color: lightcoral;
+}
+
+.content > div:nth-child(3) {
+    background-color: lightskyblue;
+}
+
+.footer {
+    height: 75px;
+    background-color: lightblue;
+}
+
+/* INLINE BLOCK */
+
+.inline-block > .content {
+    font-size: 0;
+}
+
+.inline-block > .content > div {
+    display: inline-block;
+    width: calc(100% / 3);
+    font-size: 16px;
+}
+
+/* FLOAT */
+
+.float > .content > div {
+    width: calc(100% / 3);
+    float: left;
+}
+
+.fix {
+    clear: both;
+}
+
+
+/* FLEX */
+
+.flex > .content {
+    display: flex;
+}
+
+.flex > .content > div {
+    flex-grow: 1;
+    width: calc(100% / 3);
+}
+
+.flex > .content > div:not(:first-child) {
+   margin-left: 30px;
+}
+
+.flex > .content > div:nth-child(2) {
+    order: -1;
+}
+
+/* GRID */
+
+.grid > .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+}
+
+.grid > .content > div:nth-child(2) {
+    order: -1;
+}
+
+.grid > .content > div:nth-child(3) {
+    grid-column: 1 / 3;
+}
+
+
